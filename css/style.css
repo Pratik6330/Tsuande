@@ -1,0 +1,349 @@
+/* Importing Poppins */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital@1&display=swap');
+
+@font-face {
+    font-family: "ggs";
+    src: url("/fonts/gg\ sans\ Regular.woff") format('woff');
+  }
+  
+/* @font-face {
+    font-family: "ggsb";
+    src: url("/fonts/gg\ sans\ Bold.woff") format('woff');
+    font-weight: bold;
+}
+   */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    z-index: 100;
+    padding: 0 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: .5s;
+    box-shadow: 0 3px 3px 1px #11111185;
+}
+
+.nav{
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nav, .nav-item{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* .logo{
+    font-size: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #111;
+} */
+
+.logo{
+    height: 88px;
+    /* width: 88px; */
+    margin-top: 5px;
+}
+
+.logo .X, .X{
+    color: red;
+}
+
+.nav-item{
+    column-gap: 30px;
+}
+
+.nav-link{
+    transition: 0.5s;
+    position: relative;
+    font-weight: 400;
+    color: #111;
+}
+
+.login-btn{
+    padding: 6px 24px;
+    color: #111;
+    border: 2px solid #111;
+    background: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#alink .download-btn, .download-btn{
+    padding: 9px 24px;
+    color: #fff;
+    background: #111;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#alink .download-btn, #alink, .download-btn{
+    color: #fff;
+}
+
+#alink .download-btn:hover, .download-btn:hover{
+    /* background-color: #d085ff; */
+    background-color: #ff4444;
+}
+
+.login-btn:active, .download-btn:active{
+    transform: scale(0.98);
+    color: #ff4444;
+    border-color: #ff4444;
+}
+
+.nav-link:hover{
+    /* color: #d085ff; */
+    color: #ff4444;
+}
+
+.nav-link .link-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    border-radius: 5px;
+    z-index: -1;
+    transform: scale(0);
+    transition: .5s;
+    opacity: 0;
+}
+
+.nav-link:hover .link-bg, a.active .link-bg{
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Niche wale bhaiya */
+
+.container{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    /* background-image: url(/img/2.jpg); */
+    /* background-size: cover; */
+    /* background-position: center; */
+    background: #fff;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Sep. them */
+
+.moar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text3{
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 9px;
+    color: #f1f1f1;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 6px 24px;
+}
+
+.div-top:nth-child(1){
+    /* background-image: url(/img/2.jpg); */
+    /* background-size: cover; */
+    /* background-position: center; */
+    color: #fff;
+    /* background-attachment: fixed; */
+}
+
+.div-top:nth-child(2){
+    background-color: #fdffff;
+}
+
+.div-top:nth-child(3){
+    height: 400px;
+    background-image: url(/img/more.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* filter: blur(2px); */
+}
+
+.div-top:nth-child(4){
+    background-color: #fdffff;
+}
+
+.div-top:nth-child(5){
+    height: 400px;
+    background:url(/img/bg.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Home --> Landing screen */
+.div-top:nth-child(1)::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    opacity: .4;
+    z-index: -1;
+}
+
+.bg-img-slider{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -10;
+}
+
+.bgrnd{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.showing{
+    opacity: 1;
+    z-index: -1;
+    transition: none;
+}
+
+/* Main Home Content */
+.typed, #hlight{
+    color: yellow;
+}
+
+.div-top .text{
+    margin: 85px;
+    text-align: center;
+    font-family: "gg sans";
+}
+
+.div-top .text a{
+    text-decoration: none;
+    color: #ff4444;
+    transition: 0.5s;
+}
+
+.div-top .text a:hover{
+    color: #d055ff;
+    text-decoration: underline;
+}
+
+.div-top .text h1{
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.auth-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: relative;
+    left: 50%; */
+}
+
+.auth-btn{
+    padding: 9px 24px;
+    color: #fff;
+    margin-right: 30px;
+    background: #111;
+    border: 3px solid #111;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.auth-btn:hover{
+    background: transparent;
+    color: #ff4444;
+}
+
+.auth-btn:active{
+    border: 3px solid #ff4444;
+}
+
+/* Tsuande */
+.imgth-container{
+    margin: 200px;
+}
+
+.imgth{
+    height: 90vh;
+    /* border-radius: 22px; */
+    border-bottom: 3.5px solid black;
+}
+
+.text2{
+    font-family: ggs;
+    margin-left: 50px;
+}
+
+.text2 h1{
+    color: #d055ff;
+    font-size: 48px;
+    font-family: ggs;
+    font-weight: 900;
+}
+
+#hn, #nt{
+    border-top: 2px solid #111;
+    border-bottom: 2px solid #111;
+}
+
+.download-sc-btn{
+    padding: 15px 29px;
+    color: #fff;
+    background: #111;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.download-sc-btn:hover{
+    background-color: white;
+    color: #111;
+}

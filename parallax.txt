@@ -1,0 +1,22 @@
+// Varivales
+let headerBackgrounds = document.querySelectorAll(".bgrnd");
+let imgIndex = 0;
+
+// Functional Image Slideshow
+function changeBackground() {
+    // Remove showing class from current backgroud.
+    headerBackgrounds[imgIndex].classList.remove("showing");
+
+    // Increase value by 1
+    imgIndex++;
+
+    // What if the image is the last image
+    if(imgIndex >= headerBackgrounds.length){
+        imgIndex = 0;
+    }
+
+    // Add .showing to next bgrnd
+    headerBackgrounds[imgIndex].classList.add("showing");
+}
+
+setInterval(changeBackground, 5000)
